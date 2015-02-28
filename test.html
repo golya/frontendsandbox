@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: #2f3d0e;
+        }
+        .image {
+            width: 100px;
+            height: 100px;
+        }
+
+        .imagecontainer {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        .img-trash, .img-search {
+            visibility:hidden;
+            opacity: 0.4;
+            color: #ffffff;
+            position: absolute;            
+            top: 5px;
+            z-index: 10;
+        }
+
+        .img-trash {
+            left: 70px;
+        }
+
+        .img-search {
+            left: 5px;
+        }
+
+        .imagecontainer:hover div.img-trash, .imagecontainer:hover div.img-search {
+            visibility:visible;
+        }
+
+        .imagecontainer:hover .image{
+            opacity: 0.6;
+        }
+
+        div.img-trash:hover, div.img-search:hover{
+            opacity: 1;
+        }
+
+    </style>
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
+
+<div class="imagecontainer">
+    <div class="fa fa-2x fa-trash-o img-trash"></div>
+    <div class="fa fa-2x fa-search-plus img-search"></div>
+    <img class="image" src="08.jpg" />
+</div>
 
 </body>
 </html>
